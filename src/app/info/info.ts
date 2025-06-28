@@ -7,9 +7,16 @@ import { Component } from '@angular/core';
   styleUrl: './info.css'
 })
 export class Info {
-  display = true
+  dispProjs = false
+  dispContact = false
+  dispAbout = false
   willdisProjs(){
-    this.display = !this.display
-    console.log('This button has been clicked!')
+    this.dispProjs = !this.dispProjs
+  }
+  willdisCont(){
+    this.dispContact = !this.dispContact
+  }
+  willdisAbout(){
+    this.dispAbout = !this.dispAbout
   }
 }

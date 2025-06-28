@@ -2,14 +2,17 @@
     font-size: 25px;
     color: white;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-shadow: 2px 2px 5px rgb(255, 15, 15);
-    background-color: bisque;
+    text-shadow: 0px 0px px rgb(255, 15, 15);
+}
+.background{
+    box-shadow: inset 0px 0px 10px 2px #ffffff;
+    border-top-right-radius:  5px;
+    border-bottom-left-radius:  5px;
+    background-color: rgba(196, 222, 255, 0.36);
 }
 
 div {
-    padding: 5px;
-    border-radius: 10px;
-    margin: 2px
+
 }
 
 nav {
@@ -21,42 +24,36 @@ nav {
 }
 
 .navbar{
-    border-radius: 0;
-    border: 3px dashed rebeccapurple;
-    background-color: gray;
+    border-radius: 2px;
+    box-shadow: inset 0px 0px 10px 2px #8f73ff;
+    background-color: rgba(186, 192, 255, 0.258);
     margin: 0px;
     padding: 0px;
 }
 
 .btn {
     font-size: 25px;
+    
     font-style: italic;
     cursor: pointer;
     color: white;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     display: inline;
+    margin-top: 3px;
     margin-left: 5px;
     margin-right: 5px;
     padding-left: 20px;
     padding-right: 20px;
-    border-radius: 8px;
-    border: 2px inset rgba(255, 0, 0, 0.5);
-    background: linear-gradient(310deg, rgba(184, 135, 11, 0.75), rgba(240, 128, 128, 0.75));
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 10px 2px #73dcff;
+    border: 2px inset rgba(89, 0, 255, 0.5);
+    background: linear-gradient(310deg, rgba(11, 14, 184, 0.75), rgba(128, 225, 240, 0.75));
     transition: 0.2s;
 }
 
 .inside {
-    padding: 5px;
+    padding: 10px;
     border-radius: 10px;
-    margin: 2px;
-}
-
-.background {
-    background-image: linear-gradient(310deg, rgba(184, 135, 11, 0.75), rgba(240, 128, 128, 0.75)), url('animefood.gif');
-    background-size: 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-
 }
 
 .h1 {
@@ -64,6 +61,7 @@ nav {
 }
 
 .h2 {
+    font-style: italic;
     display: inline;
     font-size: 35px;
 }
@@ -74,10 +72,21 @@ nav {
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+.contact {
+    background-image: linear-gradient(310deg, rgba(34, 34, 34, 0.75), rgba(255, 255, 255, 0.75)), url('phone.gif');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.about {
+    background-image: linear-gradient(310deg, rgba(34, 34, 34, 0.75), rgba(255, 255, 255, 0.75)), url('spongebob.gif');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 
 .btn:hover {
-    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.4);
+    font-size: x-large;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
-    border: 2px groove crimson;
     transform: scale(1.1);
 }

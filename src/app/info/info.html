@@ -5,19 +5,45 @@
             <div class="navbar">
                 <div class='h2'>Ramen here</div>
                 <nav>
-                    <button class="btn">Home</button>
-                    <button (click)="willdisProjs()" class="btn">Projects</button>
-                    <button class="btn">Contact</button>
-                    <button class="btn">About</button>
+                    <button (mouseenter)='willdisProjs()' (mouseleave)='willdisProjs()' (click)='willdisProjs()'  class="btn">Projects</button>
+                    <button (mouseenter)='willdisCont()' (mouseleave)='willdisCont()' (click)='willdisCont()'  class="btn">Contact</button>
+                    <button (mouseenter)='willdisAbout()' (mouseleave)='willdisAbout()' (click)='willdisAbout()'  class="btn">About</button>
 
                 </nav>
             </div>
-            @if(display){
+            @if(dispProjs){
             <div class="projs">
                 <pre>
                     Project 1 :
                     Project 1 : 
                     Project 1 : 
+                    </pre>
+            </div>
+            }
+
+            @if(dispContact){
+            <div class="contact">
+                <pre>
+                    Contact 1
+                    Contact 1
+                    Contact 1
+                    Contact 1
+                    Contact 1
+                    Contact 1
+                    </pre>
+            </div>
+            }
+
+            @if(dispAbout){
+            <div class="about">
+                <pre>
+                    About rmndls
+                    About rmndls
+                    About rmndls
+                    About rmndls
+                    About rmndls
+                    About rmndls
+                    About rmndls
                     </pre>
             </div>
             }
