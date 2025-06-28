@@ -1,8 +1,8 @@
-body {
+.body {
     font-size: 25px;
     color: white;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    text-shadow: 2px 2px 2px rgb(255, 15, 15);
+    text-shadow: 2px 2px 5px rgb(255, 15, 15);
     background-color: bisque;
 }
 
@@ -16,6 +16,14 @@ nav {
     float: right;
     display: inline;
     list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+.navbar{
+    border-radius: 0;
+    border: 3px dashed rebeccapurple;
+    background-color: gray;
     margin: 0px;
     padding: 0px;
 }

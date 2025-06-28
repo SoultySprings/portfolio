@@ -4,9 +4,13 @@ import { Info } from "./info/info";
 
 @Component({
   selector: 'app-root',
+  imports: [Info],
   templateUrl: './app.html',
   styleUrl: './app.css',
-  imports: [Info],
 })
 export class App {
+  number = 0
+  inc(){
+    this.number = this.number+1
+  }
 }
