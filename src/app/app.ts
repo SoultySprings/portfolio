@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Pro } from "./pro/pro";
+import { Info } from "./info/info";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.html',
   styleUrl: './app.css',
-  imports: [Pro],
+  imports: [Info],
 })
 export class App {
-  title = 'rmndls';
 }
