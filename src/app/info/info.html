@@ -1,12 +1,12 @@
-<div class="body">
+<div class="body text-focus-in">
     <div class="background">
         <div class="nav2">
             <div class="navbar">
 
-                <div class="h1"><img class='svgimage' src="ramen.ico" width="50" height="50"> a rmndls site</div>
+                <div class="head"><img class='svgimage' src="ramen.ico" width="30" height="30"> a rmndls site </div>
                 <!-- <div class='h2'>Ramen here</div> -->
                 <nav>
-                    <button (click)='willdisRes()' class="btn">Resume</button>
+                    <!-- <button (click)='willdisRes()' class="btn">Resume</button> -->
                     <button (click)='willdisProjs()' class="btn">Projects</button>
                     <button (click)='willdisCont()' class="btn">Contact</button>
                     <button (click)='willdisAbout()' class="btn">About</button>
@@ -15,13 +15,13 @@
             </div>
         </div>
         <div class="navcomps">
-            @if(dispResume){
-            <div class="resume">
+            <!-- @if(dispResume){
+            <div class="resume text-focus-in">
                 <embed src="MyRes5.pdf" width="800px" height="2100px">
             </div>
-            }
+            } -->
             @if(dispProjs){
-            <div class="projs">
+            <div class="projs text-focus-in2">
                 <pre>
 Intelligent Beamforming: Reinforcement Learning Empowering 5G/6G Networks
     Python, NumPy, gym, TensorFlow • rebrand.ly/UAVReport • January 2024 - June 2024
@@ -33,7 +33,7 @@ Intelligent Beamforming: Reinforcement Learning Empowering 5G/6G Networks
 </pre>
                 <div class="zepto">
                     <pre>
-<h2 style="font-size: 30px; margin-block-start: 0px;margin-block-end: 0px;">Zepto Inventory EDA (Out Of Stock Replenishment)</h2>
+<h2 class="head" style="margin-block-start: 0;margin-block-end: 0;">Zepto Inventory EDA (Out Of Stock Replenishment)</h2>
     Python, Pandas, Plotly Express, Rich.Console
      <a href="https://www.rebrand.ly/ZeptoEDA">rebrand.ly/ZeptoEDA</a> | May 2025 - June 2025
         • Conducted Exploratory Data Analysis (EDA) on Zepto’s inventory dataset using Pandas and NumPy.
@@ -58,7 +58,7 @@ Processors For Smart Devices
             }
 
             @if(dispContact){
-            <div class="contact">
+            <div class="contact text-focus-in2">
                 <pre>
     Contact 1
     Contact 1
@@ -71,7 +71,7 @@ Processors For Smart Devices
             }
 
             @if(dispAbout){
-            <div class="about">
+            <div class="about text-focus-in2">
                 <pre>
     About rmndls
     About rmndls
