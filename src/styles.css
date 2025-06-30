@@ -1,9 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&display=swap');
+
 html{
     margin:0px;
     padding:0px;
-    background: url('background.gif');
-    background-repeat:no-repeat ;
+    background-image: url('background.gif');
     background-position: fixed;
-    background-size: 100%, auto;
+    background-repeat: no-repeat;
+    background-size:cover;
 }

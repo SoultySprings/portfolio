@@ -1,22 +1,24 @@
 <div class="body">
     <div class="background">
-        <div class="inside">
-            <div class="h1">Hi there!👋</div>
+        <div class="nav2">
             <div class="navbar">
-                <div class='h2'>Ramen here</div>
+                <div class="h1"><img src="ramen.png" width="20" height="20">rmndls</div>
+                <!-- <div class='h2'>Ramen here</div> -->
                 <nav>
-                    <button (mouseenter)='willdisProjs()' (mouseleave)='willdisProjs()' (click)='willdisProjs()'  class="btn">Projects</button>
-                    <button (mouseenter)='willdisCont()' (mouseleave)='willdisCont()' (click)='willdisCont()'  class="btn">Contact</button>
-                    <button (mouseenter)='willdisAbout()' (mouseleave)='willdisAbout()' (click)='willdisAbout()'  class="btn">About</button>
+                    <button (click)='willdisProjs()'  class="btn">Projects</button>
+                    <button (click)='willdisCont()'  class="btn">Contact</button>
+                    <button (click)='willdisAbout()'  class="btn">About</button>
 
                 </nav>
+                </div>
             </div>
+            <div class="navcomps">
             @if(dispProjs){
             <div class="projs">
                 <pre>
-                    Project 1 :
-                    Project 1 : 
-                    Project 1 : 
+    Project 1 :
+    Project 1 : 
+    Project 1 : 
                     </pre>
             </div>
             }
@@ -24,12 +26,12 @@
             @if(dispContact){
             <div class="contact">
                 <pre>
-                    Contact 1
-                    Contact 1
-                    Contact 1
-                    Contact 1
-                    Contact 1
-                    Contact 1
+    Contact 1
+    Contact 1
+    Contact 1
+    Contact 1
+    Contact 1
+    Contact 1
                     </pre>
             </div>
             }
@@ -37,16 +39,16 @@
             @if(dispAbout){
             <div class="about">
                 <pre>
-                    About rmndls
-                    About rmndls
-                    About rmndls
-                    About rmndls
-                    About rmndls
-                    About rmndls
-                    About rmndls
+    About rmndls
+    About rmndls
+    About rmndls
+    About rmndls
+    About rmndls
+    About rmndls
+    About rmndls
                     </pre>
             </div>
             }
-        </div>
+            </div>
     </div>
 </div>
