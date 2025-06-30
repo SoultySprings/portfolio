@@ -3,6 +3,7 @@ pre{
     white-space: pre-wrap;
     padding: 25px;
     font-family: 'Funnel Display', sans-serif;
+    font-size: 1.25vw;
 }
 
 nav {
@@ -42,6 +43,8 @@ nav {
 
 .navbar{
     display:flex;
+    position: fixed;
+    width: 94vw;
     justify-content: space-evenly;
     align-items: center;
     padding:25px;
@@ -53,15 +56,15 @@ nav {
 }
 
 .btn {
-    width: fit-content;
-    font-size: 2vw;
+    display: inline-block;
+    text-align: center;
+    font-size: 1.75vw;
     font-weight: 400;
     font-style:normal;
     text-shadow: 0px 0px 5px rgba(0, 0, 0, 1);
     cursor: pointer;
     color: #DED3C4;
-    font-family: 'Funnel Display', sans-serif; 
-    align-items: right;
+    font-family: 'Funnel Display', sans-serif;
     border: 2px solid #4681a9c1;
     border-radius: 3px;
     box-shadow: #4681a9 0px 10px 20px -5px, #26465b 0px -10px 20px 5px;
@@ -80,37 +83,40 @@ a{
 a:hover{
     color: rgb(255, 167, 84);
 }
-.zepto{
-    border-radius: 40px;
+.navcompbg{
+    border-radius: 1vw;
+    align-content: center;
     box-shadow: #a94b46 5px 5px 10px -5px, #a94b46 -5px -5px 10px -5px;
     margin:10px;
     display: flex;
 }
 
-.zeptocontent{
-    display: flex;
+.projcont{
+  text-shadow: 2px 2px 10px rgba(255, 122, 122, 0.748), 2px 2px 0px rgb(255, 15, 15, 0.5);
+    display: grid;
+    align-content: center;
+    padding: 0px;
+    border: 0px;
+    margin: 0px;
 }
 .zeptoeach{
-    border-radius: 5px;
+    border-radius: 1vw;
     width:100%;
     height:auto;
     margin:10px;
     box-shadow: #a96e46 0px 5px 10px -2px, #a96e46 0px -5px 10px 2px;
 }
 .zeptogifs{
-    padding-right: 40px;
+    padding-right: 2vw;
     display: grid;
     align-content: center;
 } 
 .inside {
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 1.25vw;
 }
 .head {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    padding-right: 10;
+    
     text-shadow: 2px 2px 10px rgba(255, 122, 122, 0.748), 2px 2px 0px rgb(255, 15, 15, 0.5);
     text-align:start;
     font-size: 2.25vw;
@@ -118,9 +124,8 @@ a:hover{
 }
 
 .projs{
-    border-radius: 10px;
+    border-radius: 1.25vw;
     box-shadow: #5f0000 0px 10px 20px -2px;
-    border-radius: 10px;
     margin: 10px;
     background-color: #341c35b6;
     background-size: 100%;
@@ -130,7 +135,7 @@ a:hover{
     margin-bottom: 20px;
 }
 .contact{
-    border-radius: 10px;
+    border-radius: 1.25vw;
     box-shadow: #5f0000 0px 10px 20px -2px;
     border-radius: 10px;
     margin: 10px;
@@ -143,9 +148,8 @@ a:hover{
 
 }
 .about{
-    border-radius: 10px;
+    border-radius: 1vw;
     box-shadow: #5f0000 0px 10px 20px -2px;
-    border-radius: 10px;
     margin: 10px;
     background-color: #341c35b6;
     background-size: 100%;
@@ -156,7 +160,7 @@ a:hover{
 }
 
 .btn:hover {
-    font-size: 2.15vw;
+    font-size: 1.85vw;
     /* border */
     text-shadow: 0px 0px 5px #98A1BC;
     transform: scale(1.1);
