@@ -2,27 +2,58 @@
     <div class="background">
         <div class="nav2">
             <div class="navbar">
-                
-                <div class="h1"><img class='svg-image'src="ramen.ico"  width="40" height="40">
-                    rmndls</div>
+
+                <div class="h1"><img class='svgimage' src="ramen.ico" width="50" height="50"> a rmndls site</div>
                 <!-- <div class='h2'>Ramen here</div> -->
                 <nav>
-                    <button (click)='willdisProjs()'  class="btn">Projects</button>
-                    <button (click)='willdisCont()'  class="btn">Contact</button>
-                    <button (click)='willdisAbout()'  class="btn">About</button>
+                    <button (click)='willdisRes()' class="btn">Resume</button>
+                    <button (click)='willdisProjs()' class="btn">Projects</button>
+                    <button (click)='willdisCont()' class="btn">Contact</button>
+                    <button (click)='willdisAbout()' class="btn">About</button>
 
                 </nav>
-                </div>
             </div>
-            <div class="navcomps">
+        </div>
+        <div class="navcomps">
+            @if(dispResume){
+            <div class="resume">
+                <embed src="MyRes5.pdf" width="800px" height="2100px">
+            </div>
+            }
             @if(dispProjs){
-            <div class="projs"> 
-                
+            <div class="projs">
                 <pre>
-    Project 1 :
-    Project 1 : 
-    Project 1 : </pre>
-                    
+Intelligent Beamforming: Reinforcement Learning Empowering 5G/6G Networks
+    Python, NumPy, gym, TensorFlow • rebrand.ly/UAVReport • January 2024 - June 2024
+        • Applied Deep Neural Network (DNN) Q-Learning in 5G-6G networks to optimize UAV selection.
+        • Identified the best 4 out of 64 UAVs to enhance signal reception near 0 dB SINR.
+        • Addressed orientation challenges by analyzing UAV angles from 0° to 360° to prevent beam misalignment.
+        • Filtered up to 95% of background noise to improve signal clarity.
+        • Achieves ~98% accuracy in UAV selection and filtering over 50 iterations using Q-Learning.
+</pre>
+                <div class="zepto">
+                    <pre>
+<h2 style="font-size: 30px; margin-block-start: 0px;margin-block-end: 0px;">Zepto Inventory EDA (Out Of Stock Replenishment)</h2>
+    Python, Pandas, Plotly Express, Rich.Console
+     <a href="https://www.rebrand.ly/ZeptoEDA">rebrand.ly/ZeptoEDA</a> | May 2025 - June 2025
+        • Conducted Exploratory Data Analysis (EDA) on Zepto’s inventory dataset using Pandas and NumPy.
+        • Cleaned data by handling missing values and standardizing date formats for consistency.
+        • Summarized item-level metrics to identify fast-selling items and out-of-stock categories requiring replenishment.
+        • Utilized Plotly Express and Seaborn for interactive and time-based visualizations to explore trends and seasonality in inventory.
+        • Generated insights that streamlined inventory planning and identified products needing replenishment.
+        </pre>
+                    <div class='zeptogifs'><img class='zeptoeach' src="zeptoa.gif" width="640" height="360"><img
+                            class='zeptoeach' src="zeptob.gif" width="640" height="360">
+                    </div>
+                </div>
+                <pre>
+Processors For Smart Devices
+    Python, Pandas, Plotly Express, Seaborn. • rebrand.ly/ProcessorsEDA • June 2025 - Present
+        • Analyzing a dataset of processors used in smart devices (smartphones, tablets, wearables, IoT).
+        • Covers key features such as processor designers, core configurations, instruction sets, release years, and wireless capabilities.
+        • Data preparation involved standardizing processor names, cleaning inconsistent values, and imputing missing data.
+</pre>
+
             </div>
             }
 
@@ -52,6 +83,6 @@
                     </pre>
             </div>
             }
-            </div>
+        </div>
     </div>
 </div>
