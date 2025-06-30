@@ -2,10 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Double:wght@100..900&display=swap');
 
 html{
-    margin:0px;
-    padding:0px;
-    background-image: url('background.gif');
-    background-position: fixed;
+
+    background: #020024;
+    background: conic-gradient(#282828 0%, black 5%, #282828 100%);
+    background-attachment: fixed;
+    width: 100vw;
+    height: 100vh;
     background-repeat: no-repeat;
-    background-size:cover;
+
 }
