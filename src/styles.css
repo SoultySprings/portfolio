@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap');
 
 body {
-    background: linear-gradient(275deg, #282828, black, #282828);
+    background: linear-gradient(275deg, #180047, black, #1d1351);
     background-size: 800% 800%;
     animation: bg-pan-right 6s ease infinite alternate both;
     margin: 0;
