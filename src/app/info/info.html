@@ -2,7 +2,7 @@
     <div class="background">
         <div class="nav2">
             <div class="navbar">
-                <div class="head" style="display: flex;gap: 10px;align-items: center;padding-right: 10;"><img class='svgimage' src="ramen.ico" style="width: 4vw; height: 4vw;"> a rmndls site </div>
+                <div (click)='willdisHome()' class="head blink-2" style="display: flex;gap: 10px;align-items: center;padding-right: 10;"><img class='svgimage' src="ramen.ico" style="width: 4vw; height: 4vw;">rmndls</div>
                 <!-- <div class='h2'>Ramen here</div> -->
                 <nav>
                     <!-- <button (click)='willdisRes()' class="btn">Resume</button> -->
@@ -11,58 +11,80 @@
                     <button (click)='willdisAbout()' class="btn">About</button>
                 </nav>
             </div>
-            <br><br><br><br>
         </div>
+        <br>
         <div class="navcomps">
             <!-- @if(dispResume){
             <div class="resume text-focus-in">
                 <embed src="MyRes5.pdf" width="800px" height="2100px">
             </div>
             } -->
+            @if(dispHome){
+                <div class="homebg text-focus-in2"><div class="dispContact navcompbg text-focus-in projcont" style="height:29vw; border: 5px double #a94b46;font-weight:800;font-size: 3vw;padding: 4.5vw;"><div style="background-color: rgba(0, 0, 0, 0.808);border-radius:10px;padding: 10px;">Please Click from the any of the above to start your journey! Incase you want to be back to this page, click on the logo icon!</div></div></div>
+                <!--<div><img src="programmer.gif" class='text-focus-in' width="400" height="400"></div>-->
+            }
+
             @if(dispProjs){
             <div class="projs text-focus-in2">
-                <div class="navcompbg" style="display: grid; padding:2vw">
-                    <h2 class="projcont">Intelligent Beamforming: Reinforcement Learning Empowering 5G/6G Networks</h2>
-                    <h3 class="projcont">Python, Pandas, Plotly Express, Seaborn.</h3>
-                    <pre class="projcont">
-Intelligent Beamforming: Reinforcement Learning Empowering 5G/6G Networks
-    Python, NumPy, gym, TensorFlow • rebrand.ly/UAVReport • January 2024 - June 2024
-        • Applied Deep Neural Network (DNN) Q-Learning in 5G-6G networks to optimize UAV selection.
-        • Identified the best 4 out of 64 UAVs to enhance signal reception near 0 dB SINR.
-        • Addressed orientation challenges by analyzing UAV angles from 0° to 360° to prevent beam misalignment.
-        • Filtered up to 95% of background noise to improve signal clarity.
-        • Achieves ~98% accuracy in UAV selection and filtering over 50 iterations using Q-Learning.
-</pre></div>
+                <div style="display: flex;">
+                    
+                    <div class='zeptogifs'><img class='zeptoeach' src="uavbeam.gif"><img class='zeptoeach' src="uavbeam2.png"></div>
 
-<div style="display: flex;">
-                <div class="navcompbg" style="display: grid; padding:2vw">
-                    <h2 class="projcont" style="font-size:2vw;">Zepto Inventory EDA (Out Of Stock Replenishment)</h2>
-                    <h3 class="projcont" style="font-size:1.7vw;">Python, Pandas, Plotly Express, Rich.Console</h3> 
-                    <pre class="projcont">
-     <a href="https://www.rebrand.ly/ZeptoEDA">rebrand.ly/ZeptoEDA</a> | May 2025 - June 2025
-        • Conducted Exploratory Data Analysis (EDA) on Zepto’s inventory dataset using Pandas and NumPy.
-        • Cleaned data by handling missing values and standardizing date formats for consistency.
-        • Summarized item-level metrics to identify fast-selling items and out-of-stock categories requiring replenishment.
-        • Utilized Plotly Express and Seaborn for interactive and time-based visualizations to explore trends and seasonality in inventory.
-        • Generated insights that streamlined inventory planning and identified products needing replenishment.
-        </pre></div>
-                    <div class='zeptogifs'><img class='zeptoeach' src="zeptoa.gif"><img
-                            class='zeptoeach' src="zeptob.gif">
+                    <div class="navcompbg" style="display: grid; padding:2vw">
+                        <h2 class="projcont" style="font-size:2vw;text-decoration-line: underline; text-decoration-style: wavy;">Intelligent Beamforming: Reinforcement Learning Empowering 5G/6G Networks</h2>
+                        <h3 class="projcont" style="font-size:1.7vw;">Python, Pandas, Plotly Express, Seaborn</h3>
+                        <a class="projcont" href="https://rebrand.ly/UAVReport">rebrand.ly/UAVReport</a>
+                        <p class = "projcont"style="margin-block-start: 0em;margin-block-end: 0em;">January 2024 - June 2024</p>
+                            <ul class="ula projcont" style="padding-inline-start: 2vw;">
+                                <li> Applied Deep Neural Network (DNN) Q-Learning in 5G-6G networks to optimize UAV selection.</li>
+                                <li> Identified the best 4 out of 64 UAVs to enhance signal reception near 0 dB SINR.</li>
+                                <li> Addressed orientation challenges by analyzing UAV angles from 0° to 360° to prevent beam misalignment.</li>
+                                <li> Filtered up to 95% of background noise to improve signal clarity.</li>
+                                <li> Achieves ~98% accuracy in UAV selection and filtering over 50 iterations using Q-Learning.</li>
+                            </ul>
                     </div>
-</div>
-                <div class="navcompbg" style="display: grid; padding:2vw">
-                    <h2 class="projcont">Processors for Smart Devices</h2>
-                    <h3 class="projcont">Python, Pandas, Plotly Express, Seaborn.</h3>
-                    <pre class="projcont">
-<a href="https://rebrand.ly/ProcessorsEDA">rebrand.ly/ProcessorsEDA</a>
-    June 2025 - Present
-        • Analyzing a dataset of processors used in smart devices (smartphones, tablets, wearables, IoT).
-        • Covers key features such as processor designers, core configurations, instruction sets, release years, and wireless capabilities.
-        • Data preparation involved standardizing processor names, cleaning inconsistent values, and imputing missing data.
-</pre></div>
-<br>
+                </div>
+
+                <div style="display: flex;">
+                    <div class="navcompbg" style="display: grid; padding:2vw">
+                        <h2 class="projcont" style="font-size:2vw;text-decoration-line: underline; text-decoration-style: wavy;">Zepto Inventory EDA (Out Of Stock Replenishment)</h2>
+                        <h3 class="projcont" style="font-size:1.7vw;">Python, Pandas, Plotly Express, Rich.Console</h3>
+                        <a class = "projcont" href="https://www.rebrand.ly/ZeptoEDA">rebrand.ly/ZeptoEDA</a>
+                        <p class = "projcont" style="margin-block-start: 0em;margin-block-end: 0em;">May 2025 - June 2025</p>
+                            <ul class="ula projcont" style="padding-inline-start: 2vw;">
+                                <li> Conducted Exploratory Data Analysis (EDA) on Zepto’s inventory dataset using Pandas and NumPy.</li>
+                                <li> Cleaned data by handling missing values and standardizing date formats for consistency.</li>
+                                <li> Summarized item-level metrics to identify fast-selling items and out-of-stock categories requiring replenishment.</li>
+                                <li> Utilized Plotly Express and Seaborn for interactive and time-based visualizations to explore trends and seasonality in inventory.</li>
+                                <li> Generated insights that streamlined inventory planning and identified products needing replenishment.</li>
+                            </ul>
+                    </div>
+
+                    <div class='zeptogifs' style="padding-right: 2vw;"><img class='zeptoeach' src="zeptoa.gif"><img class='zeptoeach'src="zeptob.gif"></div>
+                
+                </div>
+
+                <div style="display: flex;">
+
+                    <div class='zeptogifs'><img class='zeptoeach' src="proclipa.gif"><img class='zeptoeach' src="proclipb.gif"></div>
+                    
+                    <div class="navcompbg" style="display: grid; padding:2vw">
+                        <h2 class = "projcont"  style="font-size:2vw;text-decoration-line: underline; text-decoration-style: wavy;">Processors for Smart Devices</h2>
+                        <h3 class = "projcont" style="font-size:1.7vw;">Python, Pandas, Plotly Express, Seaborn.</h3>
+                        <a class = "projcont" href="https://rebrand.ly/ProcessorsEDA">rebrand.ly/ProcessorsEDA</a>
+                        <p class = "projcont"style="margin-block-start: 0em;margin-block-end: 0em;">June 2025 - Present</p>
+                            <ul class="ula projcont" style="padding-inline-start: 2vw;">
+                                <li>Analyzing a dataset of processors used in smart devices (smartphones, tablets, wearables, IoT)</li>
+                                <li>Covers key features such as processor designers, core configurations, instruction sets, release years, and wireless capabilities.</li>
+                                <li>Data preparation involved standardizing processor names, cleaning inconsistent values, and imputing missing data.</li>
+                            </ul>
+                    </div>
+                </div> 
+
+                <br>
             </div>
             }
+            
 
             @if(dispContact){
             <div class="contact text-focus-in2">
@@ -91,5 +113,23 @@ Intelligent Beamforming: Reinforcement Learning Empowering 5G/6G Networks
             </div>
             }
         </div>
+
+
+
+        <!--<div class="navbar" style="justify-content: center; align-items: center; gap:10px; position: fixed;">
+            <div class="head" style="display: flex;gap: 10px;align-items: center;">Socials </div>
+             <div class='h2'>Ramen here</div>
+            <nav>
+                <div class="head" style="display: flex;gap: 10px;align-items: center;">
+                    <a href='https://github.com/SoultySprings'><img src="github.png" style='height:5vh; width:5vh'></a>
+                    <a href='https://discord.com/users/562666957166346241'><img src="discord.gif"
+                            style='height:5vh; width:5vh'></a>
+                    <a href='https://www.instagram.com/ramendls_/'><img src="insta.gif"
+                            style='height:5vh; width:5vh'></a>
+                </div>
+            </nav>
+        </div>
+        -->
+
     </div>
 </div>

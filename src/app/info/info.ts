@@ -8,32 +8,44 @@ import { Component } from '@angular/core';
   styleUrl: './info.css'
 })
 export class Info {
+  dispHome = true
   dispProjs = false
   dispContact = false
   dispAbout = false
   dispResume = false
+  willdisHome(){
+    this.dispHome = true
+    this.dispResume = false 
+    this.dispProjs = false
+    this.dispAbout = false
+    this.dispContact = false
+  }
   willdisRes(){
+    this.dispHome = false
     this.dispProjs = false
     this.dispAbout = false
     this.dispContact = false
     this.dispResume = !this.dispResume
   }
   willdisProjs(){
+    this.dispHome = false
     this.dispResume = false
     this.dispContact = false
-    this.dispProjs = !this.dispProjs
+    this.dispProjs = true
     this.dispAbout = false
   }
   willdisCont(){
+    this.dispHome = false
     this.dispResume = false
     this.dispProjs = false
-    this.dispContact = !this.dispContact
+    this.dispContact = true
     this.dispAbout = false
   }
   willdisAbout(){
+    this.dispHome = false
     this.dispResume = false
     this.dispContact = false
-    this.dispAbout = !this.dispAbout
+    this.dispAbout = true
     this.dispProjs = false
   }
 }
