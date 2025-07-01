@@ -6,9 +6,10 @@
                 <!-- <div class='h2'>Ramen here</div> -->
                 <nav>
                     <!-- <button (click)='willdisRes()' class="btn">Resume</button> -->
+                     <button (click)='willdisHome()' class="btn">Home</button>
                     <button (click)='willdisProjs()' class="btn">Projects</button>
-                    <button (click)='willdisCont()' class="btn">Contact</button>
-                    <button (click)='willdisAbout()' class="btn">About</button>
+                    <button (click)='willdisCont()' class="btn">Socials</button>
+                    
                 </nav>
             </div>
         </div>
@@ -20,7 +21,7 @@
             </div>
             } -->
             @if(dispHome){
-                <div class="homebg text-focus-in2"><div class="dispContact navcompbg text-focus-in projcont" style="height:29vw; border: 5px double #a94b46;font-weight:800;font-size: 3vw;padding: 4.5vw;"><div style="background-color: rgba(0, 0, 0, 0.808);border-radius:10px;padding: 10px;">Please Click from the any of the above to start your journey! Incase you want to be back to this page, click on the logo icon!</div></div></div>
+                <div class="homebg text-focus-in2"><div class="dispContact navcompbg text-focus-in projcont" style="height:55vh; border: 5px double #a94b46;font-weight:800;font-size: 3vw;padding: 4.5vw;"><div style="background-color: rgba(0, 0, 0, 0.808);border-radius:10px;padding: 10px;">Please click from the any of the above to start your journey! Incase you want to be back to this page, click on the logo icon!</div></div></div>
                 <!--<div><img src="programmer.gif" class='text-focus-in' width="400" height="400"></div>-->
             }
 
@@ -28,7 +29,7 @@
             <div class="projs text-focus-in2">
                 <div style="display: flex;">
                     
-                    <div class='zeptogifs'><img class='zeptoeach' src="uavbeam.gif"><img class='zeptoeach' src="uavbeam2.png"></div>
+                    <div class='zeptogifs' style="padding-right: 0px;"><img class='zeptoeach' src="uavbeam.gif" style="width: 90vh;"><img class='zeptoeach' src="uavbeam2.jpg" style="width: 90vh;"></div>
 
                     <div class="navcompbg" style="display: grid; padding:2vw">
                         <h2 class="projcont" style="font-size:2vw;text-decoration-line: underline; text-decoration-style: wavy;">Intelligent Beamforming: Reinforcement Learning Empowering 5G/6G Networks</h2>
@@ -66,7 +67,7 @@
 
                 <div style="display: flex;">
 
-                    <div class='zeptogifs'><img class='zeptoeach' src="proclipa.gif"><img class='zeptoeach' src="proclipb.gif"></div>
+                    <div class='zeptogifs' style="padding-right: 1.25vw;"><img class='zeptoeach' src="proclipa.gif"><img class='zeptoeach' src="proclipb.gif"></div>
                     
                     <div class="navcompbg" style="display: grid; padding:2vw">
                         <h2 class = "projcont"  style="font-size:2vw;text-decoration-line: underline; text-decoration-style: wavy;">Processors for Smart Devices</h2>
@@ -87,29 +88,25 @@
             
 
             @if(dispContact){
-            <div class="contact text-focus-in2">
-                <pre>
-    Contact 1
-    Contact 1
-    Contact 1
-    Contact 1
-    Contact 1
-    Contact 1
-                    </pre>
-            </div>
+                <div class="text-focus-in2"> 
+                    <div style="display: flex; justify-content: space-evenly; align-items: center; padding-block: 5vh;">
+                        <div><img class="aboutimg" src="about.gif"></div>
+                        <div class="aboutimg" style="display: grid; align-items: center; justify-items: center; gap: 10px; width: auto; padding:10px">
+                            <div class="projcont" style="font-size: 50px; font-weight: 500; text-decoration-line: underline; text-decoration-style: wavy;">Social links:</div>
+                            <div style="display: flex; align-items: center; justify-content: center;">
+                                <a href='https://github.com/SoultySprings'><img src="github.gif" style='width:10vw'></a>
+                                <a href='https://discord.com/users/562666957166346241'><img src="discord.gif"style='width:10vw'></a>
+                                <a href='https://www.instagram.com/ramendls_/'><img src="instagram.gif"style='width:10vw'></a>
+                                <a href='https://github.com/SoultySprings'><img src="youtube.gif" style='width:10vw'></a>
+                                <a href='https://discord.com/users/562666957166346241'><img src="discord.gif"style='width:10vw'></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             }
 
             @if(dispAbout){
             <div class="about text-focus-in2">
-                <pre>
-    About rmndls
-    About rmndls
-    About rmndls
-    About rmndls
-    About rmndls
-    About rmndls
-    About rmndls
-                    </pre>
             </div>
             }
         </div>
