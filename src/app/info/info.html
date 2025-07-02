@@ -2,18 +2,17 @@
     <div class="background">
         <div class="nav2">
             <div class="navbar">
-                <div class="head head-animation2" style="display: flex;gap: 10px;align-items: center;padding-right: 10;"><img class='svgimage' src="ramen.ico" style="width: 3vw;">rmndls</div>
+                <div class="head head-animation2" style="display: flex;gap: 10px;align-items: center;padding-right: 10;"><img class='svgimage' src="ramen.ico" style="min-width: 20px; width: 3vw;">rmndls</div>
                 <!-- <div class='h2'>Ramen here</div> -->
-                <nav>
+                <div style="display: flex; gap:5px; flex-wrap: wrap;">
                     <!-- <button (click)='willdisRes()' class="btn">Resume</button> -->
-                     <button (click)='willdisHome()' class="btn btn-animation">Home</button>
+                    <button (click)='willdisHome()' class="btn btn-animation">Home</button>
                     <button (click)='willdisProjs()' class="btn btn-animation">Projects</button>
                     <button (click)='willdisCont()' class="btn btn-animation">Socials</button>
                     
-                </nav>
+                </div>
             </div>
         </div>
-        <br>
         <div class="navcomps">
             <!-- @if(dispResume){
             <div class="resume text-focus-in">
@@ -21,7 +20,7 @@
             </div>
             } -->
             @if(dispHome){
-                <div class="homebg text-focus-in2"><div class="dispContact navcompbg projcont boxshadow-a" style="height:60vh;font-weight:800;font-size: 3vw;padding: 4.5vw;"><div class= "sechead-animation" style="background-color: rgba(0, 0, 0, 0.808);border-radius:10px;padding: 10px;">Please click from the any of the above to start your journey! Incase you want to be back to this page, click "Home"!</div></div></div>
+                <div class="homebg text-focus-in2"><div class="dispContact navcompbg projcont boxshadow-a" style="height:50vh;font-weight:800;font-size: 3vw;padding: 4.5vw; margin-top: 25px;"><div class= "sechead-animation" style="background-color: rgba(0, 0, 0, 0.808);border-radius:10px;padding: 10px;">Please click from the any of the above to start your journey! Incase you want to be back to this page, click "Home"!</div></div></div>
                 <!--<div><img src="programmer.gif" class='text-focus-in' width="400" height="400"></div>-->
             }
 
@@ -89,16 +88,16 @@
 
             @if(dispContact){
                 <div class="text-focus-in2"> 
-                    <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; padding-block:2vw; gap: 5vw">
+                    <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 5vw; margin-top:25px">
                         <div><img class="aboutimg aboutimg-anime" src="about.gif"></div>
                         <div class="aboutimg aboutimg-anime" style="display: grid; align-items: center; justify-items: center; width: auto; gap:20px">
-                            <div class="projcont" style="font-weight:800;font-size: 40px; text-decoration-line: underline; text-decoration-style: wavy;">Social links:</div>
+                            <div class="projcont" style="font-weight:800;font-size: max(20px,3vw); text-decoration-line: underline; text-decoration-style: wavy;">Social links:</div>
                             <div style="display: flex; align-items: center; justify-content: center;">
-                                <a href='https://github.com/SoultySprings'><img src="github.gif" style='width:70px'></a>
-                                <a href='https://discord.com/users/562666957166346241'><img src="discord.gif"style='width:70px'></a>
-                                <a href='https://www.instagram.com/ramendls_/'><img src="instagram.gif"style='width:70px'></a>
-                                <a href='https://www.youtube.com/@ayeramen'><img src="youtube.gif" style='width:70px'></a>
-                                <a href='https://www.reddit.com/user/FlippyyCoinn/'><img src="reddit.gif" style='width:70px'></a>
+                                <a href='https://github.com/SoultySprings'><img src="github.gif" style='min-width:45px; width:4.5vw;'></a>
+                                <a href='https://discord.com/users/562666957166346241'><img src="discord.gif" style='min-width:45px; width:4.5vw;'></a>
+                                <a href='https://www.instagram.com/ramendls_/'><img src="instagram.gif" style='min-width:45px; width:4.5vw;'></a>
+                                <a href='https://www.youtube.com/@ayeramen'><img src="youtube.gif" style='min-width:45px; width:4.5vw;'></a>
+                                <a href='https://www.reddit.com/user/FlippyyCoinn/'><img src="reddit.gif"  style='min-width:45px; width:4.5vw;'></a>
                             </div>
                         </div>
                     </div>
