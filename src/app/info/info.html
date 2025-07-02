@@ -2,13 +2,13 @@
     <div class="background">
         <div class="nav2">
             <div class="navbar">
-                <div class="head blink-2" style="display: flex;gap: 10px;align-items: center;padding-right: 10; font-size: 3vw;"><img class='svgimage' src="ramen.ico" style="width: 3vw;">rmndls</div>
+                <div class="head head-animation2" style="display: flex;gap: 10px;align-items: center;padding-right: 10;"><img class='svgimage' src="ramen.ico" style="width: 3vw;">rmndls</div>
                 <!-- <div class='h2'>Ramen here</div> -->
                 <nav>
                     <!-- <button (click)='willdisRes()' class="btn">Resume</button> -->
-                     <button (click)='willdisHome()' class="btn">Home</button>
-                    <button (click)='willdisProjs()' class="btn">Projects</button>
-                    <button (click)='willdisCont()' class="btn">Socials</button>
+                     <button (click)='willdisHome()' class="btn btn-animation">Home</button>
+                    <button (click)='willdisProjs()' class="btn btn-animation">Projects</button>
+                    <button (click)='willdisCont()' class="btn btn-animation">Socials</button>
                     
                 </nav>
             </div>
@@ -21,7 +21,7 @@
             </div>
             } -->
             @if(dispHome){
-                <div class="homebg text-focus-in2"><div class="dispContact navcompbg text-focus-in projcont" style="height:56vh; box-shadow: 0px -10px 10px 5px #a94b46, 0px 10px 10px 5px #927026;font-weight:800;font-size: 3vw;padding: 4.5vw;"><div style="background-color: rgba(0, 0, 0, 0.808);border-radius:10px;padding: 10px;">Please click from the any of the above to start your journey! Incase you want to be back to this page, click "Home"!</div></div></div>
+                <div class="homebg text-focus-in2"><div class="dispContact navcompbg projcont boxshadow-a" style="height:60vh;font-weight:800;font-size: 3vw;padding: 4.5vw;"><div class= "sechead-animation" style="background-color: rgba(0, 0, 0, 0.808);border-radius:10px;padding: 10px;">Please click from the any of the above to start your journey! Incase you want to be back to this page, click "Home"!</div></div></div>
                 <!--<div><img src="programmer.gif" class='text-focus-in' width="400" height="400"></div>-->
             }
 
@@ -29,9 +29,9 @@
             <div class="projs text-focus-in2">
                 <div style="display: flex;">
                     
-                    <div class='zeptogifs' style="padding-right: 0px;"><img class='zeptoeach' src="uavbeam.gif" style="width: 35vw;"><img class='zeptoeach' src="uavbeam2.jpg" style="width: 35vw;"></div>
+                    <div class='zeptogifs'><img class='zeptoeach' src="uavbeam.gif" style="width: 35vw;"><img class='zeptoeach' src="uavbeam2.jpg" style="width: 35vw;"></div>
 
-                    <div class="navcompbg" style="display: grid; padding:2vw">
+                    <div class="navcompbg " style="display: grid; padding:2vw">
                         <h2 class="projcont" style="font-size:2vw;text-decoration-line: underline; text-decoration-style: wavy;">Intelligent Beamforming: Reinforcement Learning Empowering 5G/6G Networks</h2>
                         <h3 class="projcont" style="font-size:1.7vw;">Python, Pandas, Plotly Express, Seaborn</h3>
                         <a class="projcont" href="https://rebrand.ly/UAVReport">rebrand.ly/UAVReport</a>
@@ -61,13 +61,13 @@
                             </ul>
                     </div>
 
-                    <div class='zeptogifs' style="padding-right: 2vw;"><img class='zeptoeach' src="zeptoa.gif" style="width: 35vw;"><img class='zeptoeach'src="zeptob.gif" style="width: 35vw;"></div>
+                    <div class='zeptogifs'><img class='zeptoeach' src="zeptoa.gif" style="width: 35vw;"><img class='zeptoeach'src="zeptob.gif" style="width: 35vw;"></div>
                 
                 </div>
 
                 <div style="display: flex;">
 
-                    <div class='zeptogifs' style="padding-right:;"><img class='zeptoeach' src="proclipa.gif" style="width: 35vw;"><img class='zeptoeach' src="proclipb.gif" style="width: 35vw;"></div>
+                    <div class='zeptogifs'><img class='zeptoeach' src="proclipa.gif" style="width: 35vw;"><img class='zeptoeach' src="proclipb.gif" style="width: 35vw;"></div>
                     
                     <div class="navcompbg" style="display: grid; padding:2vw">
                         <h2 class = "projcont"  style="font-size:2vw;text-decoration-line: underline; text-decoration-style: wavy;">Processors for Smart Devices</h2>
@@ -90,8 +90,8 @@
             @if(dispContact){
                 <div class="text-focus-in2"> 
                     <div style="display: flex; justify-content: center; align-items: center; padding-block:2vw; gap: 5vw">
-                        <div><img class="aboutimg" src="about.gif"></div>
-                        <div class="aboutimg" style="display: grid; align-items: center; justify-items: center; width: auto;">
+                        <div><img class="aboutimg aboutimg-anime" src="about.gif"></div>
+                        <div class="aboutimg aboutimg-anime" style="display: grid; align-items: center; justify-items: center; width: auto;">
                             <div class="projcont" style="font-weight:800;font-size: 3vw; text-decoration-line: underline; text-decoration-style: wavy;">Social links:</div>
                             <div style="display: flex; align-items: center; justify-content: center;">
                                 <a href='https://github.com/SoultySprings'><img src="github.gif" style='width:7.5vw'></a>
