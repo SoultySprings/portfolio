@@ -186,8 +186,8 @@ li{
 }
 
 .head-animation2 {
-	-webkit-animation: head-animation2 5s ease-in-out infinite ;
-	        animation: head-animation2 5s ease-in-out infinite ;
+	-webkit-animation: head-animation2 5s cubic-bezier(0.87, 0.09, 0.78, 0.94) infinite ;
+	        animation: head-animation2 5s cubic-bezier(0.87, 0.09, 0.78, 0.94) infinite ;
 }
 
 .sechead-animation {
@@ -406,19 +406,19 @@ li{
 }
 @keyframes boxshadow-a {
   0% {
-    box-shadow: 2px 2px 5px 2px #a94b46,  inset 2px 2px 5px 2px #927026
+    box-shadow: 2px 2px 2px 2px #9be3ff,  inset 2px 2px 2px 2px #6c7fff
   }
   25%{
-    box-shadow: 2px -2px 5px 2px #a94b46, inset 2px -2px 5px 2px #927026
+    box-shadow: 2px -2px 2px 2px #9be3ff, inset 2px -2px 2px 2px #6c7fff
   }
   50%{
-    box-shadow: -2px -2px 5px 2px #a94b46, inset -2px -2px 5px 2px #927026
+    box-shadow: -2px -2px 2px 2px #9be3ff, inset -2px -2px 2px 2px #6c7fff
   }
   75% {
-    box-shadow: -2px 2px 5px 2px #a94b46, inset -2px 2px 5px 2px #927026
+    box-shadow: -2px 2px 2px 2px #9be3ff, inset -2px 2px 2px 2px #6c7fff
   }
   100%{
-    box-shadow: 2px 2px 5px 2px #a94b46, inset  2px 2px 5px 2px #927026
+    box-shadow: 2px 2px 2px 2px #9be3ff, inset  2px 2px 2px 2px #6c7fff
   }
 }
 
