@@ -94,7 +94,7 @@ body {
   width: 30rem;
   height: auto;
   margin-right: 40px;
-  filter: blur(5px);
+  filter: blur(2px);
 }
 @keyframes scroll-left {
   0%   { transform: translateX(0); }
