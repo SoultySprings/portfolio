@@ -6,7 +6,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'; 
 // import { AppComponent } from './app.component';
 
-bootstrapApplication(App, appConfig)
+bootstrapApplication(App, appConfig,)
   .catch((err) => console.error(err));
 
 

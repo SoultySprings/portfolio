@@ -1,13 +1,16 @@
-import { Component } from '@angular/core';
-
+import { Component, Inject } from '@angular/core';
+import { CommonModule } from '@angular/common';      
+import { isPlatformBrowser } from '@angular/common';
 
 @Component({
+    standalone: true,
   selector: 'app-info',
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './info.html',
-  styleUrl: './info.css'
+  styleUrls: ['./info.css'] 
 })
 export class Info {
+
   dispHome = true
   dispProjs = false
   dispContact = false

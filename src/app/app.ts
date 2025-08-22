@@ -1,10 +1,13 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { Info } from "./info/info";
+import { Component, NgModule } from '@angular/core';
+import { Portfolio } from "./portfolio/portfolio";
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 @Component({
   selector: 'app-root',
-  imports: [Info],
+  imports: [ReactiveFormsModule,
+    HttpClientModule, Portfolio],
   templateUrl: './app.html',
   styleUrl: './app.css',
 })

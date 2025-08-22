@@ -19,11 +19,18 @@
         </div>
         
         <div class="navcomps">
-            <!-- @if(dispResume){
+            @if(dispResume){
             <div class="resume text-focus-in">
-                <embed src="MyRes5.pdf" width="800px" height="2100px">
+                <!-- <div *ngIf="isBrowser">
+                <pdf-viewer
+                    [src]="'assets/pdfs/FSResume_2.pdf'"
+                    [render-text]="true"
+                    style="display: block; height: 80vh;">
+                </pdf-viewer>
+                </div> -->
+                <iframe [src]="'assets/pdfs/FSResume_2.pdf'" width="100%" height="800px"></iframe>
             </div>
-            } -->
+            }
             @if(dispHome){
                 <div class="homebg text-focus-in2"><div class="dispContact homecompbg projcont boxshadow-a" style="height:50vh;font-weight:800;font-size: 3vw;padding: 4.5vw; margin-top: 25px;"><div class= "sechead-animation" style="background-color: rgba(0, 0, 0, 0.808);border-radius:10px;padding: 10px;">Please click from the any of the above to start your journey! Incase you want to be back to this page, click "Home"!</div></div></div>
                 <!--<div><img src="programmer.gif" class='text-focus-in' width="400" height="400"></div>-->
