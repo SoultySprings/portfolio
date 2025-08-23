@@ -33,7 +33,7 @@ export class Portfolio implements OnInit, AfterViewInit {
     private fb: FormBuilder,
     private http: HttpClient,
     @Inject(PLATFORM_ID) private platformId: object
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     // build form
@@ -50,7 +50,7 @@ export class Portfolio implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     // start animation loop only in browser
     if (isPlatformBrowser(this.platformId)) {
-      this.animate();
+      // this.animate();
     }
   }
 
@@ -97,34 +97,23 @@ export class Portfolio implements OnInit, AfterViewInit {
   private currentX = 50;
   private currentY = 50;
   private speed = 0.05;
-  private time = 2;
 
-  @HostListener('document:mousemove', ['$event'])
-  onMouseMove(event: MouseEvent) {
-    if (!isPlatformBrowser(this.platformId)) return;
-    this.targetX = (event.clientX / window.innerWidth) * 100;
-    this.targetY = (event.clientY / window.innerHeight) * 100;
-  }
+  private lastUpdate = 0;
 
-  private animate() {
-    if (!isPlatformBrowser(this.platformId)) return;
+@HostListener('document:mousemove', ['$event'])
+onMouseMove(event: MouseEvent) {
+  const now = Date.now();
+  if (now - this.lastUpdate < 50) return; // update every 50ms
+  this.lastUpdate = now;
 
-    this.time += 0.016;
+  const gradX = (event.clientX / window.innerWidth) * 100;
+  const gradY = (event.clientY / window.innerHeight) * 100;
 
-    this.currentX += (this.targetX - this.currentX) * this.speed;
-    this.currentY += (this.targetY - this.currentY) * this.speed;
+  document.documentElement.style.setProperty('--grad-x', `${gradX}%`);
+  document.documentElement.style.setProperty('--grad-y', `${gradY}%`);
+}
 
-    const oscillationX = Math.sin(this.time * 0.5) * 5;
-    const oscillationY = Math.cos(this.time * 0.7) * 5;
 
-    const gradX = this.currentX + oscillationX;
-    const gradY = this.currentY + oscillationY;
-
-    document.documentElement.style.setProperty('--grad-x', `${gradX}%`);
-    document.documentElement.style.setProperty('--grad-y', `${gradY}%`);
-
-    requestAnimationFrame(() => this.animate());
-  }
 
   /* -------------------------
      Contact form submission
@@ -133,44 +122,44 @@ export class Portfolio implements OnInit, AfterViewInit {
     'https://script.google.com/macros/s/AKfycbypnbMflvatQyTdBOodz_W5-aLyNxK_04lBSwTxY2yAEnr2ZlnAwMGrooQbY4xK1tHa/exec';
 
   async submitForm(): Promise<void> {
-  this.contactForm.markAllAsTouched();
-  if (this.contactForm.invalid) {
-    this.formStatus = '⚠️ Please fill all fields correctly.';
-    return;
+    this.contactForm.markAllAsTouched();
+    if (this.contactForm.invalid) {
+      this.formStatus = '⚠️ Please fill all fields correctly.';
+      return;
+    }
+
+    this.submitting = true;
+    this.formStatus = '⏳ Sending...';
+
+    const body = new URLSearchParams();
+    body.set("name", this.contactForm.value.name.trim());
+    body.set("email", this.contactForm.value.email.trim());
+    body.set("message", this.contactForm.value.message.trim());
+
+    try {
+      await firstValueFrom(
+        this.http.post(this.SCRIPT_URL, body.toString(), {
+          headers: new HttpHeaders({
+            "Content-Type": "application/x-www-form-urlencoded"
+          }),
+          responseType: 'text'
+        })
+      );
+
+      setTimeout(() => {
+        this.formStatus = "✅ Message sent — thanks!";
+        this.contactForm.reset();
+      }, 1000);
+
+    } catch {
+      setTimeout(() => {
+        this.formStatus = "✅ Message sent — thanks!";
+        this.contactForm.reset();
+      }, 1000);
+    } finally {
+      this.submitting = false;
+    }
   }
-
-  this.submitting = true;
-  this.formStatus = '⏳ Sending...';
-
-  const body = new URLSearchParams();
-  body.set("name", this.contactForm.value.name.trim());
-  body.set("email", this.contactForm.value.email.trim());
-  body.set("message", this.contactForm.value.message.trim());
-
-  try {
-    await firstValueFrom(
-      this.http.post(this.SCRIPT_URL, body.toString(), {
-        headers: new HttpHeaders({
-          "Content-Type": "application/x-www-form-urlencoded"
-        }),
-        responseType: 'text'
-      })
-    );
-
-    setTimeout(() => {
-      this.formStatus = "✅ Message sent — thanks!";
-      this.contactForm.reset();
-    }, 1000);
-
-  } catch {
-    setTimeout(() => {
-      this.formStatus = "✅ Message sent — thanks!";
-      this.contactForm.reset();
-    }, 1000);
-  } finally {
-    this.submitting = false;
-  }
-}
 
 
 
