@@ -325,7 +325,7 @@
                     <div class="pc-inner project-links">
 
                         <h3>MarkMate: Spring-Powered Academic Record System</h3>
-                        <a class="project-links" href="https://github.com/MarkMate">GitHub: MarkMate</a>
+                        <a class="project-links" href="https://github.com/SoultySprings/markmate">GitHub: MarkMate</a>
                         <p style="margin-block-start: 0em;margin-block-end: 0em;">July 2025</p>
                         <ul class="ula projcont" style="padding-inline-start: 2vw;">
                             <li>Developed a containerized in-memory student record system with Spring Boot and H2,
@@ -478,22 +478,26 @@
                 (ngSubmit)="submitForm()">
                 <div class="row">
                     <label for="name">Name</label>
-                    <input id="name" type="text" formControlName="name" style="font-family: 'Funnel Display', sans-serif;" placeholder="Your full name" />
+                    <input id="name" type="text" formControlName="name"
+                        style="font-family: 'Funnel Display', sans-serif;" placeholder="Your full name" />
                 </div>
 
                 <div class="row">
                     <label for="email">Email</label>
-                    <input id="email" type="email" formControlName="email" style="font-family: 'Funnel Display', sans-serif;" placeholder="you@company.com" />
+                    <input id="email" type="email" formControlName="email"
+                        style="font-family: 'Funnel Display', sans-serif;" placeholder="you@company.com" />
                 </div>
 
                 <div class="row">
                     <label for="message">Message</label>
-                    <textarea id="message" rows="6" formControlName="message" style="font-family: 'Funnel Display', sans-serif;" placeholder="A short note..."></textarea>
+                    <textarea id="message" rows="6" formControlName="message"
+                        style="font-family: 'Funnel Display', sans-serif;" placeholder="A short note..."></textarea>
                 </div>
 
                 <div class="form-actions">
                     <!-- type="submit" works now because (ngSubmit) is wired up -->
-                    <button id="submit-btn" class="btn btn-primary" type="submit" [disabled]="submitting" style="font-family: 'Funnel Display', sans-serif;">
+                    <button id="submit-btn" class="btn btn-primary" type="submit" [disabled]="submitting"
+                        style="font-family: 'Funnel Display', sans-serif;">
                         {{ submitting ? 'In process...' : 'Send Message' }}
                     </button>
 

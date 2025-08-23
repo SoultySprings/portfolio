@@ -100,18 +100,18 @@ export class Portfolio implements OnInit, AfterViewInit {
 
   private lastUpdate = 0;
 
-@HostListener('document:mousemove', ['$event'])
-onMouseMove(event: MouseEvent) {
-  const now = Date.now();
-  if (now - this.lastUpdate < 50) return; // update every 50ms
-  this.lastUpdate = now;
+  @HostListener('document:mousemove', ['$event'])
+  onMouseMove(event: MouseEvent) {
+    const now = Date.now();
+    if (now - this.lastUpdate < 50) return; // update every 50ms
+    this.lastUpdate = now;
 
-  const gradX = (event.clientX / window.innerWidth) * 100;
-  const gradY = (event.clientY / window.innerHeight) * 100;
+    const gradX = (event.clientX / window.innerWidth) * 100;
+    const gradY = (event.clientY / window.innerHeight) * 100;
 
-  document.documentElement.style.setProperty('--grad-x', `${gradX}%`);
-  document.documentElement.style.setProperty('--grad-y', `${gradY}%`);
-}
+    document.documentElement.style.setProperty('--grad-x', `${gradX}%`);
+    document.documentElement.style.setProperty('--grad-y', `${gradY}%`);
+  }
 
 
 
