@@ -88,6 +88,8 @@ export class Portfolio implements OnInit, AfterViewInit {
   closeNav(): void {
     this.navOpen = false;
   }
+  
+  
 
   /* -------------------------
      Changing the gradient with mouse change

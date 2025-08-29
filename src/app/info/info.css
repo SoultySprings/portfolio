@@ -16,7 +16,7 @@ nav {
 }
 
 .homebg{
-  background-image: linear-gradient( black, rgba(0, 0, 0, 0.292), black), url(ramen.gif);
+  /* background-image: linear-gradient( black, rgba(0, 0, 0, 0.292), black), url(ramen.gif); */
   background-size:cover;
   background-position: center;
   border-radius: 1vw;

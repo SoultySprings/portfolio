@@ -607,14 +607,21 @@ body {
 
 .project-img-grid {
   display: flex;
-  /* use flex layout */
-  flex-wrap: wrap;
-  /* allow items to wrap to the next line */
   gap: 2px;
-  /* spacing between items */
-  justify-content: center;
-  /* center the items */
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+
+  /* hide scrollbar */
+  -ms-overflow-style: none;  /* IE & Edge */
+  scrollbar-width: none;     /* Firefox */
 }
+
+.project-img-grid::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+
 
 .project-img-grid img {
   border-radius: 12px;
