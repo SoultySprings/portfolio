@@ -2,46 +2,48 @@
    Variables & base
    ------------------------- */
 /* Palette 29 — Desert Mirage */
+/* 4. Nordic Winter */
+/* 6. Black & Cinder embers */
 :root {
-  --bg: #1a0f05;
-  --bg-end: #3d1f0d;
+  --bg: #000000;
+  --bg-end: #1e1109;
   --grad-x: 50%;
   --grad-y: 50%;
-  --card: #24160d;
-  --card2: #24160dac;
-  --muted: #ffc78f;
-  --text: #fff4e6;
-  --rev-text: #1a0c00;
-  --accent: linear-gradient(90deg, #ffb347, #ffc78f 60%, #ffdca8);
-  --primary: #ffb347;
-  --secondary: #ffc78f;
-  --glass: rgba(255, 200, 140, 0.04);
-  --glass-2: rgba(255, 200, 140, 0.02);
-  --shadow: 0 6px 18px rgba(60, 30, 10, 0.7);
+  --card: #110c09;
+  --card2: #110c09ac;
+  --muted: #fdba74;
+  --text: #ffedd5;
+  --rev-text: #000000;
+  --accent: linear-gradient(90deg, #f97316, #fb923c 60%, #fdba74);
+  --primary: #f97316;
+  --secondary: #fb923c;
+  --glass: rgba(249, 115, 22, 0.04);
+  --glass-2: rgba(249, 115, 22, 0.02);
+  --shadow: 0 6px 18px rgba(0, 0, 0, 0.7);
   --radius: 12px;
   --container: 1100px;
   --gap: 1.25rem;
-  --glass-border: rgba(255, 200, 140, 0.06);
+  --glass-border: rgba(249, 115, 22, 0.06);
   --blend-mode: normal;
 }
 
 :root[data-theme="light"] {
-  --bg: #fff8f0;
-  --bg-end: #c0ab96;
+  --bg: #fff7ed;
+  --bg-end: #fdead7;
   --grad-x: 50%;
   --grad-y: 50%;
   --card: #ffffff;
   --card2: #ffffff93;
-  --muted: #785527;
-  --text: #1a0c00;
-  --rev-text: #fff4e6;
-  --accent: linear-gradient(90deg, #61501c, #7a5c10 55%, #b08d26);
-  --primary: #b85c1f;
-  --secondary: #d29c60;
-  --glass: rgba(60, 30, 10, 0.03);
-  --glass-2: rgba(60, 30, 10, 0.02);
-  --glass-border: rgba(60, 30, 10, 0.06);
-  --shadow: 0 10px 30px rgba(60, 30, 10, 0.08);
+  --muted: #c2410c;
+  --text: #9a3412;
+  --rev-text: #ffedd5;
+  --accent: linear-gradient(90deg, #ea580c, #f97316 55%, #fb923c);
+  --primary: #ea580c;
+  --secondary: #f97316;
+  --glass: rgba(154, 52, 18, 0.03);
+  --glass-2: rgba(154, 52, 18, 0.02);
+  --glass-border: rgba(154, 52, 18, 0.06);
+  --shadow: 0 10px 30px rgba(154, 52, 18, 0.08);
   --blend-mode: normal;
 }
 
@@ -74,7 +76,7 @@ html {
 body {
   margin: 0;
   font-family: 'Funnel Display', sans-serif;
-  background: linear-gradient(135deg, var(--bg), var(--bg-end) 120%);
+  background: radial-gradient(circle at top, var(--bg), var(--bg-end) );
   color: var(--text);
 }
 
